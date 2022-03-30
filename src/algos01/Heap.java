@@ -14,7 +14,7 @@ import java.util.Random;
 public class Heap {
 	
 	// MAX size of array:
-	static int MAXPQ = 10;
+	static int MAXPQ = 11;
 	
 	
 	/**
@@ -22,7 +22,7 @@ public class Heap {
 	 * to an array with a size of ten
 	 * @param a array where random number input
 	 */
-	public static void randomTenArray(int[] a) {
+	public static void randomArray(int[] a) {
 		Random ran = new Random();
 		for (int i = 0; i < a.length; i++) {
 			a[i] = ran.nextInt(99);
@@ -95,23 +95,33 @@ public class Heap {
 	
 	
 	/**
-	 * Checks what numbers form a heap by informing
-	 * the last place for numbers not being order anymore
-	 * @param a
+	 * Checks integer numbers priority order from an heap array
+	 * by informing the last place for a number being in order
+	 * @param a is heap array
 	 */
 	public static int checkHeapPriority(int[] a) {
-		return 0;
+		int result = 0;
+		for (int i = a.length-1; i >= 1; i--) {
+			if ( a[i] >= a[i/2] ) result = i;
+		}
+		return result;
 	}
-
+	
+	
+	public static int 
+	
 	
 	/**
 	 * Main for testing
 	 * @param args not in use
 	 */
 	public static void main(String[] args) {
+		// Random array
+		int[] array = new int[11];
+		randomArray(array);
 		
-		// ----- Keon rakentaminen alkioiden syöttövaiheessa ------
-		int[] array = { 0, 18, 5, 30, 22, 16, 15, 9, 7, 8, 21 };
+		// ----- Keon rakentaminen alkioiden syottovaiheessa ------
+		// int[] array = { 0, 18, 5, 30, 22, 16, 15, 9, 7, 8, 21 };
 		int[] heap = new int[11];
 		System.out.print("Tyhja taulukko  : " + Arrays.toString(array)+"\n");
 		
@@ -125,12 +135,16 @@ public class Heap {
 		}
 		System.out.print("Keko rakennettu : "+Arrays.toString(heap)+"\n");
 		
-		// ---- Keon rakentaminen kun alkiot jo syötetty ----
+		// ---- Keon rakentaminen kun alkiot jo syotetty ----
 		// teeKeko(heap);
 		// System.out.print("Keko rakennettu : "+Arrays.toString(heap));
 		
+		// ---- Mihin paikkaan asti taulukon luvut muodostavat keon
+		// (viimeinen paikka jossa luvut eivat jarjestyksessa) ----
 		int result = checkHeapPriority(array);
 		System.out.println(result);
+		
+		
 	}
 
 }
