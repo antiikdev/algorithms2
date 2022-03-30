@@ -48,7 +48,7 @@ public class Heap {
 	public static void lisaaKekoon(int[] a, int alkio) {
 		if (a[0] >= MAXPQ) {
 			// Taulukko on taynna
-			// TODO mahdollinen: kasvata taulukon kokoa
+			// TODO mahdollinen: kasvata taulukon kokoa 
 			return;
 		}
 		a[0]++;
@@ -155,6 +155,7 @@ public class Heap {
 		randomHeapArray(array);
 		
 		// ----- Keon rakentaminen alkioiden syottovaiheessa ------
+		// ---------------------------------------------------------
 		// int[] array = { 0, 18, 5, 30, 22, 16, 15, 9, 7, 8, 21 };
 		int[] heap = new int[11];
 		System.out.print("Tyhja taulukko  : " + Arrays.toString(array)+"\n");
@@ -170,25 +171,51 @@ public class Heap {
 		
 		System.out.print("Keko rakennettu : "+Arrays.toString(heap)+"\n");
 		
-		// ---- Keon rakentaminen kun alkiot jo syotetty ----
-		// teeKeko(heap);
-		// System.out.print("Keko rakennettu : "+Arrays.toString(heap));
-		
 		
 		// ---- Mihin paikkaan asti taulukon luvut muodostavat keon
 		// (viimeinen paikka jossa luvut eivat jarjestyksessa) ----
 		int result = checkHeapPriority(heap);
 		System.out.println("Priority ends in index "+result);
 		
-		
 		// ---- Keon toiseksi pienin alkio ----
 		result = heapSecondSmallest(heap);
 		System.out.println("Second smallest number is "+result);
 		
-		
 		// ---- Keon suurin alkio ----
 		result = heapBiggest(heap);
 		System.out.println("Biggest number is "+result);
+		System.out.println("----------------");
+		
+		
+		// --------- Muodostetaan uusi keko -------
+		// ----------------------------------------
+		// lisaaKekoon-algoritmilla
+		System.out.println("lisaaKekoon-algoritmia:");
+		
+		int[] taulukko = { 12, 20, 18, 4, 33, 26, 9, 17, 25, 13 };
+		int[] keko = new int[11];
+		System.out.print("Tyhja taulukko  : " + Arrays.toString(taulukko)+"\n");
+		
+		int j = 0;
+		while (j < taulukko.length) {
+			int alkio = taulukko[j];
+			lisaaKekoon(keko, alkio); // rakentaminen
+			j++;
+		}
+		System.out.print("Keko rakennettu : "+Arrays.toString(keko)+"\n");
+		System.out.println("----------------");
+	
+		
+		// teeKeko-algoritmilla
+		System.out.println("teeKeko-algoritmilla:");
+		// taulukko2[0] alkioiden lukumaara:
+		int[] taulukko2 = { 10, 12, 20, 18, 4, 33, 26, 9, 17, 25, 13 };
+		System.out.print("Jo lisatyt alkiot: " +
+				Arrays.toString(taulukko2)+"\n");
+		teeKeko(taulukko2);
+		System.out.print("Keko rakennettu  : "+
+				Arrays.toString(taulukko2));
+		
 	}
 
 }
