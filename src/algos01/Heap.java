@@ -129,6 +129,22 @@ public class Heap {
 	
 	
 	/**
+	 * Finds biggest number in heap array
+	 * @param a is heap array
+	 * @return biggest number in heap array
+	 */
+	public static int heapBiggest(int[] a) {
+		if ( a.length <= 0 ) return 0;
+		int biggest = a[1];
+		
+		for (int i = 2; i < a.length; i++) {
+			if ( a[i] > biggest ) biggest = a[i];
+		}
+		return biggest;
+	}
+	
+	
+	/**
 	 * Main for testing
 	 * @param args not in use
 	 */
@@ -168,6 +184,11 @@ public class Heap {
 		// ---- Keon toiseksi pienin alkio ----
 		result = heapSecondSmallest(heap);
 		System.out.println("Second smallest number is "+result);
+		
+		
+		// ---- Keon suurin alkio ----
+		result = heapBiggest(heap);
+		System.out.println("Biggest number is "+result);
 	}
 
 }
