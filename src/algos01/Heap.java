@@ -22,9 +22,10 @@ public class Heap {
 	 * to an array with a size of ten
 	 * @param a array where random number input
 	 */
-	public static void randomArray(int[] a) {
+	public static void randomHeapArray(int[] a) {
+		if ( a.length <= 0 ) return;
 		Random ran = new Random();
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 1; i < a.length; i++) {
 			a[i] = ran.nextInt(99);
 		}
 	}
@@ -108,7 +109,23 @@ public class Heap {
 	}
 	
 	
-	public static int 
+	/**
+	 * Finds second smallest integer number from the heap
+	 * @param a array
+	 * @return second smallest int number
+	 */
+	public static int heapSecondSmallest(int[] a) {
+		if ( a.length <= 0 ) return 0;
+		int[] twoSmallest = { a[a.length-1], 0 };
+		
+		for (int i = a.length-1; i >= 1; i--) {
+			if ( a[i] < twoSmallest[0] ) {
+				twoSmallest[1] = twoSmallest[0];
+				twoSmallest[0] = a[i];
+			}
+		}
+		return twoSmallest[1];
+	}
 	
 	
 	/**
@@ -117,8 +134,9 @@ public class Heap {
 	 */
 	public static void main(String[] args) {
 		// Random array
-		int[] array = new int[11];
-		randomArray(array);
+		int size = 11;
+		int[] array = new int[size];
+		randomHeapArray(array);
 		
 		// ----- Keon rakentaminen alkioiden syottovaiheessa ------
 		// int[] array = { 0, 18, 5, 30, 22, 16, 15, 9, 7, 8, 21 };
@@ -133,18 +151,23 @@ public class Heap {
 			// array[i] = alkio; // ei-rakentaminen
 			i++;
 		}
+		
 		System.out.print("Keko rakennettu : "+Arrays.toString(heap)+"\n");
 		
 		// ---- Keon rakentaminen kun alkiot jo syotetty ----
 		// teeKeko(heap);
 		// System.out.print("Keko rakennettu : "+Arrays.toString(heap));
 		
+		
 		// ---- Mihin paikkaan asti taulukon luvut muodostavat keon
 		// (viimeinen paikka jossa luvut eivat jarjestyksessa) ----
-		int result = checkHeapPriority(array);
-		System.out.println(result);
+		int result = checkHeapPriority(heap);
+		System.out.println("Priority ends in index "+result);
 		
 		
+		// ---- Keon toiseksi pienin alkio ----
+		result = heapSecondSmallest(heap);
+		System.out.println("Second smallest number is "+result);
 	}
 
 }
