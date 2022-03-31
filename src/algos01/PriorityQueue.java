@@ -160,6 +160,43 @@ public class PriorityQueue {
 	
 	
 	/**
+	 * Searches priority value and deletes it IF found
+	 * Note: assumption that only one value exists
+	 * @param value being searched
+	 * @return value IF found, IF NOT return -1
+	 */
+	private static int poistaPrioriteetti(int value) {
+		if ( queue.isEmpty() ) return -1;
+		int[] taulu = new int[n];
+		int j = -1, priority = -1, lenght = 0;
+		
+		// poistetaan pienimmat ja etsitaan priority valueta
+		for (int i = 0; i < n; i++) {
+			taulu[i]= poistaPienin();
+			lenght++;
+			if ( taulu[i] == value ) {
+				j = i;
+				break;
+			}
+		}
+		
+		// jos ei loytynyt, palautetaan -1
+		if (j == -1) return -1;
+		
+		// jos loytyi, otetaan talteen ja palautetaan alkiot
+		priority = taulu[j];
+		for (int i = 0; i < lenght; i++) {
+			if ( i == j ) {
+				continue;
+			}
+			lisaaAlkio(taulu[i]);
+		}
+		return priority;
+	}
+	
+
+// ----------------------------------------------------------
+	/**
 	 * Main for testing
 	 * @param args not in use
 	 */
@@ -202,6 +239,19 @@ public class PriorityQueue {
 		// (only using Class methods) 
 		int biggest = palautaSuurin();
 		System.out.println("Biggest value is " + biggest);
+		System.out.print("Content: "); printQueue();
+		System.out.println("--------------");
+		
+		
+		// --- remove priority (integer value) ---
+		// (only using Class methods) 
+		int searchDelPriority = 0;
+		int result = poistaPrioriteetti(searchDelPriority);
+		if (result >= 0) {
+			System.out.println("Priority value " + result + " deleted.");
+		} else {
+			System.out.println("Priority value not found!");
+		}
 		System.out.print("Content: "); printQueue();
 		System.out.println("--------------");
 	}
