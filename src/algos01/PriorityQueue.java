@@ -5,6 +5,7 @@
 package algos01;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -41,7 +42,7 @@ public class PriorityQueue {
 	
 	
 	/**
-	 * Remvoes smallest value
+	 * Removes and returns smallest value in the queue
 	 * @return smallest removed value
 	 */
 	private static int poistaPienin() {
@@ -90,7 +91,7 @@ public class PriorityQueue {
 		System.out.println();
 	}
 	
-	
+
 	/**
 	 * Removes second smallest number and returns it
 	 * @return second smallest number
@@ -118,17 +119,43 @@ public class PriorityQueue {
 			}
 		}
 		
-		// queue pituudesta yksi poistetaan
-		n--;
-		
 		// Alkioiden palautus, paitsi ei toiseksi pieninta
 		for (int i = 0; i < taulu.length; i++) {
-			if ( i == indeksit[1] ) continue;
+			if ( i == indeksit[1] ) {
+				n--;
+				continue;
+			}
 			lisaaAlkio(taulu[i]);
 		}
 		
 		// Palautetaan poistettu toiseksi pienin arvo
 		return pienimmat[1];
+	}
+	
+	
+	/**
+	 * @return biggest priority (value) integer (no removal)
+	 */
+	private static int palautaSuurin() {
+		// TODO: problem with the printing, one extra zero and one left out
+		// Tallennustilaa:
+		int[] taulu = new int[n];
+		int length = n;
+		int suurin = 0;
+		
+		// Suurimman etsiminen:
+		for (int i = 0; i < length; i++) {
+			taulu[i] = poistaPienin();
+			suurin = taulu[i];
+		}
+	
+		// Kaikkien alkioiden palautus:
+		for (int i = 0; i < taulu.length; i++) {
+			lisaaAlkio(taulu[i]);
+		}
+		
+		// Palautetaan suurin arvo:
+		return suurin;
 	}
 	
 	
@@ -139,30 +166,44 @@ public class PriorityQueue {
 	public static void main(String[] args) {
 		// --------- Testing PriorityQueue -------
 		// Is the queue empty?
-		// boolean b = isEmpty();
-		// System.out.println("Queue is empty: " + b);
+		boolean b = isEmpty();
+		System.out.println("Queue is empty: " + b);
+
 		
 		// Add values and print value as well as size
 		int addValues = 6;
-		for (int i = 0; i < addValues; i++ ) {
+		while (addValues > 0) {
 			int random = randomInt();
 			lisaaAlkio(random);
+			addValues--;
 		}
 
 		System.out.print("Content: "); printQueue();
-		// System.out.print("Size of the queue: " + size() + "\n");
+		System.out.print("Size of the queue: " + size() + "\n");
+		System.out.println("--------------");
 		
 		/* Remove smallest
 		int small = poistaPienin();
 		System.out.println("Smallest removed was "+small);
 		System.out.print("Content after removal: "); printQueue();
+		System.out.println("--------------");
 		*/
 		
 		
 		// --- remove second smallest number ----
+		// (only using Class methods)
 		int secondSmallest = poistaToiseksiPienin();
 		System.out.println("Second smallest removed was " + secondSmallest);
 		System.out.print("Content: "); printQueue();
+		System.out.println("--------------");
+		
+		
+		// --- return biggest value ---
+		// (only using Class methods) 
+		int biggest = palautaSuurin();
+		System.out.println("Biggest value is " + biggest);
+		System.out.print("Content: "); printQueue();
+		System.out.println("--------------");
 	}
 
 }
