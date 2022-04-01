@@ -5,7 +5,6 @@
 package algos01;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -137,7 +136,9 @@ public class PriorityQueue {
 	 * @return biggest priority (value) integer (no removal)
 	 */
 	private static int palautaSuurin() {
-		// TODO: problem with the printing, one extra zero and one left out
+		// TODO: problem with the printing: 
+		// one extra zero and biggest number missing
+		
 		// Tallennustilaa:
 		int[] taulu = new int[n];
 		int length = n;
