@@ -2,5 +2,5 @@
 
 ## Aiheet per paketti (topics per packet):
 
-- Prioriteettijono (algos01)
-- Keko kokonaislukutaulukolla (algos01)
+- Prioriteettijono (priority queue) (algos01)
+- Keko kokonaislukutaulukolla (heap and heapsort) (algos01)
