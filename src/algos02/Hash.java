@@ -1,5 +1,7 @@
 /**
- * Simple Hash functions (Finn. hajautus)
+ * Simple Hash functions (Finn. hajautus), where
+ * [0] = free (VAPAA)
+ * [-1] = deleted (POISTETTU)
  */
 package algos02;
 
@@ -8,7 +10,20 @@ package algos02;
  * @version 6 April 2022
  */
 public class Hash {
+	
+	private static int m = 10;				// size of the array
+	private static int[] t = new int[m];	// hash table
 
+	
+	// TODO: Hash function with open address creation
+	// (hajautusfunktio avoimella osoitteenmuodostuksella)
+	
+	
+	// TODO: Add (lisaa) function
+	
+	// TODO: Search (etsi)
+	
+	// TODO: Delete (poista)
 	
 	
 	/**
