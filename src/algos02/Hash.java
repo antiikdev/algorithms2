@@ -11,12 +11,18 @@ package algos02;
  */
 public class Hash {
 	
-	private static int m = 10;				// size of the array
+	private static int m = 20;				// array size (m >= n)
 	private static int[] t = new int[m];	// hash table
 
 	
-	// TODO: Hash function with open address creation
-	// (hajautusfunktio avoimella osoitteenmuodostuksella)
+	/**
+	 * TODO: Hash function with open address creation
+	 * (hajautusfunktio avoimella osoitteenmuodostuksella)
+	 * @param k
+	 */
+	private static void h(int k) {
+		
+	}
 	
 	
 	// TODO: Add (lisaa) function
