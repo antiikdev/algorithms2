@@ -4,6 +4,7 @@
 
 - Prioriteettijono (priority queue) (algos01)
 - Keko kokonaislukutaulukolla (heap and heapsort) (algos01)
+- Hajautus (Hash) (algos02)
 
 
 ### Kertaluokkamerkinnat (eng. asymptotic analysis)
