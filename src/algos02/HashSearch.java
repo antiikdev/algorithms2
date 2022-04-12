@@ -116,7 +116,7 @@ public class HashSearch {
 		HashSearch h = new HashSearch();
 		int[] taulukko = { 21, 55, 31, 49, 52, 72, 26, 19 };
 		
-		// Linear search where added taulukko numbers
+		// Add taulukko array's numbers
 		System.out.println("---------- Search ---------");
 		for (int i = 0; i < taulukko.length; i++) {
 			h.add(taulukko[i]);
