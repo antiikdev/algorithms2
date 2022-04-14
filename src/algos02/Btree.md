@@ -10,8 +10,8 @@
 ## Alkuperainen
 
 ```
-								  50
-			   20|30|35                         65|75
+				 50
+		20|30|35                         65|75
 
   16    23|37    31|32    40|44          59    68|69|73    88
 ```
@@ -28,8 +28,8 @@ uuteen halkaistuun alisolmuun (70*). Talloin osoittimia tulee nelja
 kappaletta alisolmuun.
 
 ```
-								  50
-			   20|30|35                         65|69|75
+				50
+	    20|30|35                         65|69|75
 
   16    23|37    31|32    40|44          59    68    70*|73    88
 ```
@@ -63,10 +63,10 @@ puoliksi taysi solmu: 65|75 >> alkioita siirrettava
 poistetaan 65 ja korvataan 68:lla. Korvataan 59 paikka 65:lla.
 
 ```
-							50
+				50
 	    20|30|35                           68|75
 
-  16    23|37    31|32    40|44      65    69|73    88
+  16    23|37    31|32    40|44     	 65    69|73    88
 ```
 
 ## Poista: 35
@@ -76,8 +76,8 @@ poistetaan 65 ja korvataan 68:lla. Korvataan 59 paikka 65:lla.
 
 
 ```
-							50
-	      20|30|40                         65|75
+				50
+	    20|30|40                         65|75
 
   16    23|37    31|32    44          59    68|69|73    88
 ```
