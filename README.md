@@ -7,6 +7,7 @@
 - Hajautus (Hash) (algos02)
 - B-puu (B-tree) (algos02)
 - Nelipuu (Quadtree) (algos02)
+- Trie (algos03)
 
 
 ### Kertaluokkamerkinnat (eng. asymptotic analysis)
