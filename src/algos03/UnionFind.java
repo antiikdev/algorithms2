@@ -1,11 +1,16 @@
 /**
- * Disjoint sets with union-find (Finn. alkiovieraita osajoukkoja)
- * ------------------------------------
- * 1. negative -number indicates that the node is a root node
- * 	and how many nodes it has (e.g. -3 means three nodes)
- * 2. positive numbers indicate on what root node
- * 	the node belongs to (e.g. 2 means belongs to root node 2)
- * 3. Set items (nodes) are { 1, 2, 3, 4, 5, 6, 7, 8 }
+ * Disjoint sets union-find- operation with Strings
+ * 
+ * Set String items in albhabetical order and afterwards equal int numbers:
+ *  {"kiuru", "lokki", "rastas", "sorsa", "varis"}
+ * 	    1		  2	       3   		4		 5
+ * ** Example: **
+ * 1. array: -1, -1, -1, -1, -1
+ * 2. union(1,2)
+ * 3. tree:
+ * 		1	3	4	5
+ * 		2
+ * 4. array: -2, 1, 3, 4, 5
  */
 package algos03;
 
@@ -15,17 +20,18 @@ import java.util.Arrays;
  * @author Antiik.dev
  * @version 20 April 2022
  */
-public class DisjointSets {
+public class UnionFind {
 	
-	private static int n = 9;
-	private static int[] pvJoukko = new int[n];
-	
+	private static int n = 6;
+	private static int[] pvJoukko = new int[6];
+	private static String[] jonot = {"kiuru", "lokki", "rastas", "sorsa", "varis"};
+
 	
 	/**
 	 * Initialize DisjointSets
 	 * node in array pvJoukko[0] is left empty (i=1)
 	 */
-	public DisjointSets() {
+	public UnionFind() {
 		for (int i = 1; i < n; i++) {
 			pvJoukko[i] = -1;
 		}
@@ -75,36 +81,23 @@ public class DisjointSets {
 		  return j;
 		}
 	
-
+	
 	/**
-	 * Main for tesing
+	 * Main for testing
 	 * @param args not in use
 	 */
 	public static void main(String[] args) {
-		DisjointSets set = new DisjointSets();
+		UnionFind set = new UnionFind();
 		System.out.println("Individual: " + Arrays.toString(pvJoukko));
 		
-		set.union(2,6);
+		// TODO: union nimen perusteella, eli metodin luonti, jossa
+		// nimen vaihto alkion indeksiksi
+		set.union(1, 2);
 		System.out.println("Union(2,6): " + Arrays.toString(pvJoukko));
-		set.union(3,5);
-		System.out.println("Union(3,5): " + Arrays.toString(pvJoukko));
-		set.union(7,8);
-		System.out.println("Union(7,8): " + Arrays.toString(pvJoukko));
 		
+		// TODO: vastaava kuin unionissa
 		int x = set.find(5);
 		System.out.println("Find 5's root node: " + x);
-		
-		set.union(1,4);
-		System.out.println("Union(1,4): " + Arrays.toString(pvJoukko));
-		set.union(1,3);
-		System.out.println("Union(1,3): " + Arrays.toString(pvJoukko));
-		set.union(2,7);
-		System.out.println("Union(2,7): " + Arrays.toString(pvJoukko));
-		set.union(1,2);
-		System.out.println("Union(1,2): " + Arrays.toString(pvJoukko));
-		
-		x = set.find(8);
-		System.out.println("Find 8's root node: " + x);
 	}
 
 }

@@ -8,7 +8,6 @@ package algos03;
 /**
  * @author Antiik.dev
  * @version 20 April 2022
- *
  */
 public class MultiplicationSum {
 
