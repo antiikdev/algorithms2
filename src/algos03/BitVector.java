@@ -1,5 +1,5 @@
 /**
- * Set theory: Bit vector
+ * Set theory (Finn. joukko-oppi): Bit vector (bittivektori)
  */
 package algos03;
 
@@ -10,9 +10,6 @@ import java.util.Arrays;
  * @version 19 April 2022
  */
 public class BitVector {
-	
-
-
 	
 	
 	/**
@@ -153,14 +150,14 @@ public class BitVector {
 		System.out.print("First:    ");
 		System.out.println(Arrays.toString(A));
 		
-		// add x to set A
+		// add item x to set A
 		int x = 1;
 		add(A, x);
 		System.out.print("Added 1 : ");
 		System.out.println(Arrays.toString(A));
 		System.out.println();
 		
-		// Delete number x from set A
+		// Delete item x from set A
 		x = 2;
 		delete(A, x);
 		System.out.print("Delete 2: ");
