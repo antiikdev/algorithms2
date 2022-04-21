@@ -39,18 +39,17 @@ public class DisjointSets {
 	 */
 	public void union(int a, int b) {
 		// Oletus: a ja b juurisolmuja
-		  int k;
-		  k = pvJoukko[a] + pvJoukko[b];
-		  if (pvJoukko[a] <= pvJoukko[b])
-		  {
+		int k;
+		k = pvJoukko[a] + pvJoukko[b];
+		if (pvJoukko[a] <= pvJoukko[b]) {
 		    pvJoukko[a] = k;
 		    pvJoukko[b] = a;
-		  }
-		  else
-		  {
-		    pvJoukko[b] = k;
+		    }
+		else
+		{
+			pvJoukko[b] = k;
 		    pvJoukko[a] = b;
-		  }
+		}
 	}
 	
 	
@@ -60,20 +59,20 @@ public class DisjointSets {
 	 * @return found node
 	 */
 	public int find(int x) {
-		  int j, k;
-		  // Juurisolmun etsintä:
-		  j = x;
-		  while (pvJoukko[j] > 0) {
-		    j = pvJoukko[j];
-		  }
-		  // Hakupolun tiivistys:
-		  while (pvJoukko[x] > 0) {
+		int j, k;
+		// Juurisolmun etsintä:
+		j = x;
+		while (pvJoukko[j] > 0) {
+			j = pvJoukko[j];
+		}
+		// Hakupolun tiivistys:
+		while (pvJoukko[x] > 0) {
 		    k = x;
 		    x = pvJoukko[x];
 		    pvJoukko[k] = j;
-		  }
-		  return j;
 		}
+		  return j;
+	}
 	
 
 	/**
