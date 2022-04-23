@@ -8,9 +8,15 @@
 - B-puu (B-tree) (algos02)
 - Nelipuu (Quadtree) (algos02)
 - Trie (algos03)
+    - Trie.md
+- Bittivektori (bit vector) (algos03)
+    - Example: BitVector.java
+- Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
+    - Example: UnionFind.java: -2, 1, -1, -1, -1
+- Rekursio (recursion) (algos03)
 
 
-### Kertaluokkamerkinnat (eng. asymptotic analysis)
+### Kertaluokkamerkinnat (asymptotic analysis)
 
 - f(n) = O(g(n)): f samaa tai alempaa kertaluokkaa kuin g. (iso O)
     - c,n > 0 : 0 <= f(n) <= cg(n)   n >= n0
