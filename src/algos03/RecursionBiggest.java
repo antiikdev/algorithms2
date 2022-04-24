@@ -1,5 +1,6 @@
 /**
  * Recursive algorithms to find biggest integer number
+ * by dividing (half) the array
  */
 package algos03;
 
@@ -30,12 +31,8 @@ public class RecursionBiggest {
 	 * </pre>
 	 */
 	public static int haeSuurin(int[] t, int n) {
-		if ( n == 1) {
-			return t[0];
-		}
-		else {
-			return suurin(haeSuurin(t,n-1), t[n-1]);
-		}		
+		if ( n <= 1) return t[0];
+		else return suurin(haeSuurin(t,n-1), t[n-1]);	
 	}
 	
 	
