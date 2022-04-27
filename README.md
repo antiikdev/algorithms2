@@ -14,6 +14,16 @@
 - Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
     - Example: UnionFind.java: -2, 1, -1, -1, -1
 - Rekursio (recursion) (algos03)
+- Lyhin virittävä puu (spanning tree) (algos04)
+    - Kruskal
+        - valitse kaikista lyhyin tie, ei silmukkaa
+        - Example: Kruskal.md
+    - Prim
+        - aloita yhdesta solmusta, valitse lyhyin solmu seuraavaan
+        - Example: Prim.md
+- Huffman koodit (Huffman coding) (algos04)
+    - sort, valitaan kaksi painoarvoltaan pieninta puuta yhdeksi, joiden painoarvon summa juurisolmuun, jatketaan
+    - Example: Huffman.md
 
 
 ### Kertaluokkamerkinnat (asymptotic analysis)
