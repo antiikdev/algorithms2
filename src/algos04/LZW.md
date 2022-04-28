@@ -1,8 +1,10 @@
 #LZW
 
-### Code
+### Encode
 
 String: aabbbabbbaaa
+Kooditulos: 023042
+Tilansäästö: 1 - (6 / 12) * 100 = 50 %, eli puolet 
 
 ```
 **Start:**
@@ -47,10 +49,12 @@ aabbbabbba|aa
 a b	aa	aab	bb	ab	bba
 ```
 
-### Extract code (purkaminen)
+### Decode (purkaminen)
 
 Code: 10143621
 chars: a = 0, b = 1 
+String tulos:: babbabbbabab
+Tilansäästö: 1- (8 / 12) * 100 = 33 %, eli kolmasosa
 
 ```
 **Start:**
@@ -63,22 +67,22 @@ a b
 0 1
 a b	
 
-**0: a, new 2 of ba**
+**0: a, new 2 of aa**
 10|143621				String: ba
 0 1	2
 a b	ba
 
-**1: b, new 3 of ab**
+**1: b, new 3 of bb**
 101|43621				String: bab
 0 1	2	3
 a b	ba	ab
 
-**4: bb, new 4 bb**
+**Previous is 1 (b), therefore 4: bb, new 4 bb**
 1014|3621				String: babb
 0 1	2	3	4
 a b	ba	ab	bb
 
-**3: ab, new 5 of abb**
+**Previous is 4 (bb), therefore 3: ab, new 5 of abb**
 10143|621				String: babbab
 0 1	2	3	4	5	6
 a b	ba	ab	bb	abb	
