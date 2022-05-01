@@ -2,6 +2,8 @@
  * Knapsack problem (Finn. kapsakkiongelma):
  * Choose goods (stuff) in such way that their overall usefull value (p)
  * is highest possible and the stuff weight (w) max. limit (W) is not exceeded.
+ * Algorithm source: Algoritmit 1 Jyu
+ * Example values and weights Wikipedia
  */
 package algos04;
 
@@ -46,26 +48,27 @@ public class Knapsack {
 	
 	
 	/**
-	 * Prints two dimensional array
-	 * @param array printed
-	 */
-	public static void printArray(int[][] array) {
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array[i].length; j++) {
-				if ( array[i][j] == 0 ) continue;
-				System.out.print(array[i][j] + " ");
-			}
-		}
-		System.out.println();
-	}
-	
-	
-	/**
 	 * @return max value
 	 */
 	public static int max(int a, int b) {
 		if ( a > b ) return a;
 		else return b;
+	}
+	
+	
+	/**
+	 * Prints two dimensional array of the knapsack problem
+	 * @param array printed
+	 */
+	public static void printArray(int[][] array) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				if ( array[i][j] == 0 ) continue;	// skip empty ones
+				System.out.print(array[i][j] + " ");
+			}
+			System.out.println();
+			if (i >= n) break;	// break if combinations checked
+		}
 	}
 	
 	
@@ -86,7 +89,7 @@ public class Knapsack {
 		
 		int result = fillKnapsack();
 		
-		System.out.print("Chosen goods: ");
+		System.out.print("Trial of goods combinations: ");
 		printArray(s);
 		
 		System.out.println("Sum of the goods usefull values "
