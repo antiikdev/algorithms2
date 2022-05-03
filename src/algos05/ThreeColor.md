@@ -1,4 +1,4 @@
-#Three-Coloring Problem (3-varitysongelma)
+# Three-Coloring Problem (3-varitysongelma)
 Three-Coloring Problem with backtracking method (peruutusmenetelmällä)
 
 ### Graph (verkko):
