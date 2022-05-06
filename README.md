@@ -13,7 +13,8 @@
     - Example: BitVector.java
 - Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
     - Example: UnionFind.java: -2, 1, -1, -1, -1
-- Rekursio (recursion) (algos03, algos05)
+- Rekursio (recursion) (algos03, algos04, algos05)
+    - Recursive count [RecursionCount.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/RecursionCount.java)
     - Recursive sum and sum using division [RecursiveSum.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/RecursiveSum.java)
 - Rekursioyhtalo (algos04)
 - Lyhin virittävä puu (spanning tree) (algos04)
