@@ -3,12 +3,15 @@
 Kokonaispainoraja (W): 8
 Tavarat järjestetty vähenevään järjestykseen hyötyarvo-painosuhteen
 mukaan:
+
+```
                 1  2  3   4
 -------------------------------
 Hyötyarvo (p): 13  9  10  5
 Painot (w):    4   3  5   4
 -------------------------------
 Hyöty/paino:  3.25 3  2   1.24
+```
 
 Maksimihyöty: u = p + (W-w)(pi+1 / wi+1)
 
