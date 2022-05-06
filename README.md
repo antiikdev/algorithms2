@@ -13,7 +13,8 @@
     - Example: BitVector.java
 - Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
     - Example: UnionFind.java: -2, 1, -1, -1, -1
-- Rekursio (recursion) (algos03)
+- Rekursio (recursion) (algos03, algos05)
+    - Recursive sum and sum using division [RecursiveSum.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/RecursiveSum.java)
 - Rekursioyhtalo (algos04)
 - Lyhin virittävä puu (spanning tree) (algos04)
     - Kruskal
@@ -28,7 +29,14 @@
 - LZW-menetelma (algos04)
     - merkkijonon koodaus ja purkaminen
     - Example:  LZW.md
-
+- 3-väritysongelma peruutusmenetelmällä (Three-Coloring Problem with backtracking method) (algos05)
+    - Eri väri jokaisessa toisiinsa liittyvässä solmussa
+    - Example: [ThreeColor.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/ThreeColor.md)
+- Pelipuu (Game tree) (algos05)
+    - "x is MAX player, large values are better y is MIN player, small values are better"
+    - Example: [GameTree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/GameTree.md)
+- Rajoitehakumenetelmällä kapsäkkiongelma (Knapsack problem) (algos05)
+    - Example: [Kapsakkiongelma.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/Kapsakkiongelma.md)
 
 
 ### Kertaluokkamerkinnat (asymptotic analysis)
