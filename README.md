@@ -20,16 +20,16 @@
 - Lyhin virittävä puu (spanning tree) (algos04)
     - Kruskal
         - valitse kaikista lyhyin tie, ei silmukkaa
-        - Example: Kruskal.md
+        - Example: [Kruskal.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Kruskal.md)
     - Prim
         - aloita yhdesta solmusta, valitse lyhyin solmu seuraavaan
-        - Example: Prim.md
+        - Example: [Prim.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Prim.md)
 - Huffman koodit (Huffman coding) (algos04)
     - sort, valitaan kaksi painoarvoltaan pieninta puuta yhdeksi, joiden painoarvon summa juurisolmuun, jatketaan
-    - Example: Huffman.md
+    - Example: [Huffman.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Huffman.md)
 - LZW-menetelma (algos04)
     - merkkijonon koodaus ja purkaminen
-    - Example:  LZW.md
+    - Example:  [LZW.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/LZW.md)
 - 3-väritysongelma peruutusmenetelmällä (Three-Coloring Problem with backtracking method) (algos05)
     - Eri väri jokaisessa toisiinsa liittyvässä solmussa
     - Example: [ThreeColor.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/ThreeColor.md)
