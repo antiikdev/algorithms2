@@ -3,20 +3,27 @@
 ## Aiheet per paketti (topics per packet):
 
 - Prioriteettijono (priority queue) (algos01)
+    - Example: [PriorityQueue.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/PriorityQueue.java)
 - Keko kokonaislukutaulukolla (heap and heapsort) (algos01)
+    - Heap example: [Heap.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heap.java)
+    - Heapsort example: [Heapsort.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heapsort.java)
 - Hajautus (Hash) (algos02)
+    - Example: [Hash.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Hash.java)
 - B-puu (B-tree) (algos02)
+    - Examples: [Btree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Btree.md)
 - Nelipuu (Quadtree) (algos02)
+    - Examples: [Quadtree01.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree01.md), [Quadtree02.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree02.md)
 - Trie (algos03)
-    - Trie.md
+    - [Trie.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/Trie.md)
 - Bittivektori (bit vector) (algos03)
-    - Example: BitVector.java
+    - Example: [BitVector.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/BitVector.java)
 - Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
-    - Example: UnionFind.java: -2, 1, -1, -1, -1
+    - Example: -2, 1, -1, -1, -1
+    - Example: [UnionFind.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/UnionFind.java) 
 - Rekursio (recursion) (algos03, algos04, algos05)
     - Recursive count [RecursionCount.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/RecursionCount.java)
     - Recursive sum and sum using division [RecursiveSum.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/RecursiveSum.java)
-- Rekursioyhtalo (algos04)
+- **Rekursioyhtalo (algos04)**
 - Lyhin virittävä puu (spanning tree) (algos04)
     - Kruskal
         - valitse kaikista lyhyin tie, ei silmukkaa
