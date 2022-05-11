@@ -1,6 +1,6 @@
 # Algoritmit 2 (Eng. algorithms)
 
-## Aiheet per paketti (topics per packet):
+## Aiheet (per paketti) - Topics (per packet):
 
 - Prioriteettijono (priority queue) (algos01)
     - Example: [PriorityQueue.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/PriorityQueue.java)
