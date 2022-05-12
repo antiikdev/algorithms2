@@ -3,8 +3,11 @@
 ## Aiheet (per paketti) - Topics (per packet):
 
 - Prioriteettijono (priority queue) (algos01)
+    - Numeerinen arvo, joka kuvastaa alkion tärkeyttä. Löydettävä aina tärkein arvo.
+    - Operaatioita: lisaaAlkio, poistaPienin, isEmpty
     - Example: [PriorityQueue.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/PriorityQueue.java)
 - Keko kokonaislukutaulukolla (heap and heapsort) (algos01)
+    - Tallennettavista alkioista binääripuu, jossa jokaisessa solmussa yhden alkio tiedot sekä osittain järjestetty tai täydellinen
     - Heap example: [Heap.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heap.java)
     - Heapsort example: [Heapsort.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heapsort.java)
 - Hajautus (Hash) (algos02)
