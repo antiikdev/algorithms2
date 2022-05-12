@@ -12,6 +12,18 @@
     - c, n > 0 : 0 <= c1g(n) <= f(n) <= c2g(n)  n >= n0
 
 
+## Raja-arvotesti
+
+         tA(n)
+lim n->M ----- = C tai 0 tai ääretön (M)
+         tB(n)
+
+- Raja-arvo nollasta eroava vakio C (f(n) != 0): f(n) on asymptoottisesti yhtä suuri, eli funktiot ovat samaa kertaluokkaa
+- Raja-arvo nolla: tB(n) funktio kasvaa nopeammin kuin tB(n), eli tA(n) on asymptoottisesti pienempi kuin tB(n)
+- Raja-arvo ääretön: tA(n) osoittaja on asymptoottisesti suurempi kuin tB(n), eli tA(n) kasvaa nopeammin
+
+
+
 ## Esimerkit epäyhtälöistä
 
 ### 2n^2 + 3n = O(n^2)
@@ -34,7 +46,8 @@ Tosi kun valitaan esim. c = 3 ---> n >= 3
 Siten vakiot c = 3 ja n0 = 3 
 
 
-#### 3n^2 + 4n = Ω(n^2)
+
+### 3n^2 + 4n = Ω(n^2)
 
 - f(n) = Ω(g(n): f on samaa tai ylempaa kertaluokkaa kuin g.
 
@@ -57,6 +70,7 @@ n((3-c)n + 4) >= 0, joten oltava c <= 3
 
 Tosi kun valitaan esim. c = 3 ---> n >= 0
 Siten vakiot c = 3 ja n0 = 1
+
 
 
 ### 4n^2 + 5n = o(n^3)
@@ -84,6 +98,7 @@ n > (2 + SQUARE(4+5c)) / c
 Tosi kun valitaan esim. n0 > (2 + SQUARE(4+5c)) / c
 
 
+
 ### 2n^2 + n = ω(n)
 
 - f(n) = ω(g(n)): f on (aidosti) ylempaa kertaluokkaa kuin g.
@@ -109,6 +124,7 @@ n > (c - 1) / 2
 ```
 
 Tosi kun n > (c - 1) / 2
+
 
 
 ### n^2 + 2n + 5 = ϴ(n^2)
