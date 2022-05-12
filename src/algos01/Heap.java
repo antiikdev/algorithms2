@@ -113,6 +113,7 @@ public class Heap {
 	 * Finds second smallest integer number from the heap
 	 * @param a array
 	 * @return second smallest int number
+	 * TODO possible: found from the first nodes, time complexity O(1)
 	 */
 	public static int heapSecondSmallest(int[] a) {
 		if ( a.length <= 0 ) return 0;
@@ -132,6 +133,7 @@ public class Heap {
 	 * Finds biggest number in heap array
 	 * @param a is heap array
 	 * @return biggest number in heap array
+	 * TODO possible: n/2 middle to find from the leaf nodes
 	 */
 	public static int heapBiggest(int[] a) {
 		if ( a.length <= 0 ) return 0;
@@ -190,6 +192,19 @@ public class Heap {
 		// --------- Muodostetaan uusi keko -------
 		// ----------------------------------------
 		// lisaaKekoon-algoritmilla
+		/*
+		 a  1  2  3  4  5  6  7  8  9  10
+		 1  12 
+		 2  12 20
+		 3  12 20 18
+		 4  4  12 18 20
+		 5  4  12 18 20 33
+		 6  4  12  9 20 33 26
+		 7  4  12  9 20 33 26 18
+		 8  4  12  9 17 33 26 18 20
+		 9  4  12  9 17 33 26 18 20 25
+		 10 4  12  9 17 33 26 18 20 25 33
+		 */
 		System.out.println("lisaaKekoon-algoritmia:");
 		
 		int[] taulukko = { 12, 20, 18, 4, 33, 26, 9, 17, 25, 13 };

@@ -145,6 +145,7 @@ public class PriorityQueue {
 		int suurin = 0;
 		
 		// Suurimman etsiminen:
+		// TODO possible: remove separately the final smallest (=biggest)
 		for (int i = 0; i < length; i++) {
 			taulu[i] = poistaPienin();
 			suurin = taulu[i];
