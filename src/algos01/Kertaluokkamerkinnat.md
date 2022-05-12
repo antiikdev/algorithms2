@@ -14,9 +14,11 @@
 
 ## Raja-arvotesti
 
+```
          tA(n)
 lim n->M ----- = C tai 0 tai ääretön (M)
          tB(n)
+```
 
 - Raja-arvo nollasta eroava vakio C (f(n) != 0): f(n) on asymptoottisesti yhtä suuri, eli funktiot ovat samaa kertaluokkaa
 - Raja-arvo nolla: tB(n) funktio kasvaa nopeammin kuin tB(n), eli tA(n) on asymptoottisesti pienempi kuin tB(n)
