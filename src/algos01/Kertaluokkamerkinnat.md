@@ -1,4 +1,4 @@
-### Kertaluokkamerkinnat (asymptotic analysis)
+## Kertaluokkamerkinnat (asymptotic analysis)
 
 - f(n) = O(g(n)): f samaa tai alempaa kertaluokkaa kuin g. (iso O)
     - c,n > 0 : 0 <= f(n) <= cg(n)   n >= n0
@@ -12,9 +12,9 @@
     - c, n > 0 : 0 <= c1g(n) <= f(n) <= c2g(n)  n >= n0
 
 
-### Esimerkit epäyhtälöistä
+## Esimerkit epäyhtälöistä
 
-#### 2n^2 + 3n = O(n^2)
+### 2n^2 + 3n = O(n^2)
 
 - f(n) = O(g(n)): f samaa tai alempaa kertaluokkaa kuin g.
 
@@ -59,7 +59,7 @@ Tosi kun valitaan esim. c = 3 ---> n >= 0
 Siten vakiot c = 3 ja n0 = 1
 
 
-#### 4n^2 + 5n = o(n^3)
+### 4n^2 + 5n = o(n^3)
 
 - f(n) = o(g(n)): f on (aidosti) alempaa kertaluokkaa kuin g.
 
@@ -84,7 +84,7 @@ n > (2 + SQUARE(4+5c)) / c
 Tosi kun valitaan esim. n0 > (2 + SQUARE(4+5c)) / c
 
 
-#### 2n^2 + n = ω(n)
+### 2n^2 + n = ω(n)
 
 - f(n) = ω(g(n)): f on (aidosti) ylempaa kertaluokkaa kuin g.
 
@@ -111,7 +111,7 @@ n > (c - 1) / 2
 Tosi kun n > (c - 1) / 2
 
 
-#### n^2 + 2n + 5 = ϴ(n^2)
+### n^2 + 2n + 5 = ϴ(n^2)
 
 - f(n) = ϴ(g(n)): f on samaa kertaluokkaa kuin g.
 
