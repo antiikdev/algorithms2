@@ -11,6 +11,18 @@
     - Heap example: [Heap.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heap.java)
     - Heapsort example: [Heapsort.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heapsort.java)
 - Hajautus (Hash) (algos02)
+	- Hakemisto-tietorakenne, jossa avain-alkio-parit, eli avain on alkion jonkin avainkentän arvo, jolla voidaan hakea rakenteesta.
+	- Operaatioita: lisäys, poisto, haku
+	- Aikavaativuuksien vertailu: listaosoittimella lineaarinen olisi O(n), kuitenkin binäärihaulla (puolitushaku) tai tasapainoinen binääripuu O(log n),
+	hajautusfunktion avulla keskimäärin jopa vakio O(1)
+	- Hajautusfunktio:
+		- Avaimien hajauttaminen: muodostuksessa esim. h(x) = x-a tai jakolaskumenetelmä jos arvoalue suuri h(x)=x mod x
+		- Yhteentörmäys, jos avaimilla sama kotiosoite. Kaksi tapaa käsitellä:
+			- Ketjutus: lineaarinen lista
+			- Avoin osoitteenmuodostus: tallennus hajautustaulukkoon, aputilaa ei tarvita, jossa alkion paikan määrittäminen:
+				- Lineaarinen etsintä (linear search): return (key + i) % this.m;
+				- Neliöllinen etsintä (square seach): return (key + i * i) % this.m;
+				- Kaksoishajautus (double hash): return (key + (7 - i * (key % 7))) % this.m;
     - Example: [Hash.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Hash.java)
 - B-puu (B-tree) (algos02)
     - Examples: [Btree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Btree.md)

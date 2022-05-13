@@ -3,11 +3,26 @@
 ## Aiheet (per paketti) - Topics (per packet):
 
 - Prioriteettijono (priority queue) (algos01)
+    - Numeerinen arvo, joka kuvastaa alkion tärkeyttä. Löydettävä aina tärkein arvo.
+    - Operaatioita: lisaaAlkio, poistaPienin, isEmpty
     - Example: [PriorityQueue.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/PriorityQueue.java)
 - Keko kokonaislukutaulukolla (heap and heapsort) (algos01)
+    - Tallennettavista alkioista binääripuu, jossa jokaisessa solmussa yhden alkio tiedot sekä osittain järjestetty tai täydellinen
     - Heap example: [Heap.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heap.java)
     - Heapsort example: [Heapsort.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heapsort.java)
 - Hajautus (Hash) (algos02)
+	- Hakemisto-tietorakenne, jossa avain-alkio-parit, eli avain on alkion jonkin avainkentän arvo, jolla voidaan hakea rakenteesta.
+	- Operaatioita: lisäys, poisto, haku
+	- Aikavaativuuksien vertailu: listaosoittimella lineaarinen olisi O(n), kuitenkin binäärihaulla (puolitushaku) tai tasapainoinen binääripuu O(log n),
+	hajautusfunktion avulla keskimäärin jopa vakio O(1)
+	- Hajautusfunktio:
+		- Avaimien hajauttaminen: muodostuksessa esim. h(x) = x-a tai jakolaskumenetelmä jos arvoalue suuri h(x)=x mod x
+		- Yhteentörmäys, jos avaimilla sama kotiosoite. Kaksi tapaa käsitellä:
+			- Ketjutus: lineaarinen lista
+			- Avoin osoitteenmuodostus: tallennus hajautustaulukkoon, aputilaa ei tarvita, jossa alkion paikan määrittäminen:
+				- Lineaarinen etsintä (linear search): return (key + i) % this.m;
+				- Neliöllinen etsintä (square seach): return (key + i * i) % this.m;
+				- Kaksoishajautus (double hash): return (key + (7 - i * (key % 7))) % this.m;
     - Example: [Hash.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Hash.java)
 - B-puu (B-tree) (algos02)
     - Examples: [Btree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Btree.md)
@@ -46,17 +61,4 @@
 - Rajoitehakumenetelmällä kapsäkkiongelma (Knapsack problem) (algos05)
     - Example: [Kapsakkiongelma.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/Kapsakkiongelma.md)
 
-
-### Kertaluokkamerkinnat (asymptotic analysis)
-
-- f(n) = O(g(n)): f samaa tai alempaa kertaluokkaa kuin g. (iso O)
-    - c,n > 0 : 0 <= f(n) <= cg(n)   n >= n0
-- f(n) = Ω(g(n): f on samaa tai ylempaa kertaluokkaa kuin g. (iso omega)
-    - c, n > 0 : 0 <= cg(n) <= f(n)    n >= n0
-- f(n) = o(g(n)): f on (aidosti) alempaa kertaluokkaa kuin g. (pieni o)
-    - c, n > 0 : 0 <= f(n) < cg(n) n >= n0
-- f(n) = ω(g(n)): f on (aidosti) ylempaa kertaluokkaa kuin g. (pieni omega)
-    - c, n > 0 : 0 <= cg(n) < f(n)  n >= n0
-- f(n) = ϴ(g(n)): f on samaa kertaluokkaa kuin g. (iso theta)
-    - c, n > 0 : 0 <= c1g(n) <= f(n) <= c2g(n)  n >= n0
 

@@ -41,7 +41,7 @@ public class Hash {
 		
 		for (int i = 0; i < m; i++) {	// 2. h(k,i), i=0,1,2,...,
 			int hash = hLinear(k, i);
-			if ( t[hash] == 0 ) {
+			if ( t[hash] == 0 || t[hash] == -1 ) { // tyhja tai poistettu
 				t[hash] = k;
 				n++;
 				break;
@@ -71,7 +71,8 @@ public class Hash {
 	/**
 	 * Delete index from hash table
 	 * If found key is found
-	 * @param key being deleted¨
+	 * @param key being deleted
+	 * TODO possible: if search < 0 return error, else removed -1 
 	 */
 	public void delete(int key) {
 		int search = search(key);
