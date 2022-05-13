@@ -25,8 +25,14 @@
 				- Kaksoishajautus (double hash): return (key + (7 - i * (key % 7))) % this.m;
     - Example: [Hash.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Hash.java)
 - B-puu (B-tree) (algos02)
-    - Examples: [Btree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Btree.md)
+	- 2-3-4-puu, jossa lkm:t ovat m(korkeus)-solmut-osoittimet
+	- Lisays: tarkkaillaan solmujen maksimimaaraa, jottei tule liian tayteen.
+	- Poisto: Tarkkaillaan solmujen minimimaaraa, jottei tule liian vajaaksi
+			- Vaihtoehdot: alkoiden siirto, solmujen yhdistaminen tai etsitaan edeltaja tai seuraaja
+    - Examples: [Btree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Btree.md),
+	[HashSearch.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/HashSearch.java)
 - Nelipuu (Quadtree) (algos02)
+	- x,y-pisteitä koordinaatistoon, josta haarautuu puuksi oikeaan ja vasempaan ylä- sekä alanurkkaan
     - Examples: [Quadtree01.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree01.md), [Quadtree02.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree02.md)
 - Trie (algos03)
     - [Trie.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/Trie.md)
