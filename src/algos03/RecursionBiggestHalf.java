@@ -34,8 +34,13 @@ public class RecursionBiggestHalf {
 	public static int haeSuurin(int[] t, int n) {
 		if ( n == 1) return t[0];
 		else {
-			return suurin(haeSuurin(t,n-1), t[n-1]);	
+			int k = n/2;
+			// TODO: half the table in the method call
+			// int biggestStart = haeSuurin(t[k-1], k);
+			// int biggestEnd = haeSuurin(t[n-1], n-k);
+			// return suurin(biggestStart, biggestEnd);	
 		}
+		return n; // TODO: FAKE RETURN - NOT COMPLETED
 	}
 	
 	

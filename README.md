@@ -51,11 +51,18 @@
 		- Erotus, kuuluu A:n muttei B:n (set difference: A \ B)
     - Example: [BitVector.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/BitVector.java)
 - Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
-    - Example: -2, 1, -1, -1, -1
+    - Puurakenteen toteutus taulukolla:
+		- Alkutilanne: 1 2 3 4 5, puu alussa -1 -1 -1 -1 -1, jossa jokainen juurisolmuna
+		- Liitetään alkio 5 osaksi 1:tä, jolloin -2, 1, -1, -1, -1, jossa indeksissä 1 on -2 nyt juurisolmu ja puun alkioiden lukumäärä (-2).
     - Example: [UnionFind.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/UnionFind.java) 
-- Rekursio (recursion) (algos03, algos04, algos05)
-    - Recursive count [RecursionCount.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/RecursionCount.java)
-    - Recursive sum and sum using division [RecursiveSum.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/RecursiveSum.java)
+- **Rekursio (recursion) (algos03, algos04, algos05)**
+	- Examples:
+		- Remainder sum [Remainder.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/Remainder.java)
+		- Array index multiplication sum [MultiplicationSum.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/MultiplicationSum.java)
+		- Biggest number in array [RecursionBiggest.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/RecursionBiggest.java)
+		- Biggest number by diving the table in half [RecursionBiggestHalf.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/RecursionBiggestHalf.java)
+		- Recursive count [RecursionCount.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/RecursionCount.java)
+		- Recursive sum and sum using division [RecursiveSum.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/RecursiveSum.java)
 - **Rekursioyhtalo (algos04)**
 - Lyhin virittävä puu (spanning tree) (algos04)
     - Kruskal

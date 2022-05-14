@@ -19,6 +19,13 @@ public class MultiplicationSum {
 	 * @param u second array
 	 * @param n lenght of array(s)
 	 * @return sum of arrays indexes multiplication
+	 * @example time complexity
+	 * 		  | c1			  when n = 1 
+	 * T(n) = |
+	 * 		  | T(n - 1) + c, when n > 1
+	 * 
+	 * T(n) = T(n-1)+c = T(n-2)+2c ... = T(1)+(n-1)c
+	 * = c1 - c + cn = O(n) (theta)
 	 */
 	public static int laskeYR(int[] t,int[] u, int n) {
 		if (n == 1) return t[0]*u[0];

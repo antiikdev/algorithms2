@@ -92,6 +92,7 @@ public class DisjointSets {
 		
 		int x = set.find(5);
 		System.out.println("Find 5's root node: " + x);
+		System.out.println("After find: " + Arrays.toString(pvJoukko));
 		
 		set.union(1,4);
 		System.out.println("Union(1,4): " + Arrays.toString(pvJoukko));
@@ -102,8 +103,10 @@ public class DisjointSets {
 		set.union(1,2);
 		System.out.println("Union(1,2): " + Arrays.toString(pvJoukko));
 		
+		// 
 		x = set.find(8);
 		System.out.println("Find 8's root node: " + x);
+		System.out.println("After find: " + Arrays.toString(pvJoukko));
 	}
 
 }

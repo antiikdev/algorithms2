@@ -32,7 +32,10 @@ public class RecursionBiggest {
 	 */
 	public static int haeSuurin(int[] t, int n) {
 		if ( n <= 1) return t[0];
-		else return suurin(haeSuurin(t,n-1), t[n-1]);	
+		else return suurin(haeSuurin(t,n-1), t[n-1]);
+		// Solution with n-1 first indexes and compare to last one:
+		// biggestStart = haeSuurin(t, n-1);
+		// return suurin(biggestStart, t[n-1]);
 	}
 	
 	
