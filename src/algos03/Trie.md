@@ -6,27 +6,28 @@ laki, luu, romu, ropo, tavu, tomu, tora, toru
 ### Standarditrie (standard trie)
 
 ```
+
 					0
-			
-	l					r			  t
-	
+	l				r			  t
 a		u			o			a			o
+   k	  u		m		p	    v	   m		r
+  i			   u		  o		u      u	   a u
 
-   k	  u		m		p			v	  m		r
-
-  i			   u o		   u		        u  a  u
 ```
 
 ### Pakattu trie (packed trie)
  
 ```
-			0
+
+				0
 
 	l				ro			t
 	
 aki   uu	   	 mu   po	avu		o
 
-							     mu ra ru
+							     mu   r
+								     a u
+								 
 	
 ```
 
@@ -38,12 +39,15 @@ aki   uu	   	 mu   po	avu		o
 - Esim. 0,1,2 = S[0], merkkijonot 1 paikkaan 2 
 
 ```
+
 						0
 	
 	0,0,0			2,0,1			4,0,0
 
 0,1,3	1,1,2	2,2,3	3,2,3	4,1,3		  5,1,1
-										5,2,3 6,2,3 7,2,3
+										5,2,3		6,2,2
+												6,3,3  7,3,3
+										
 ```
 
 	| 0 1 2 3 

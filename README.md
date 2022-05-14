@@ -35,8 +35,20 @@
 	- x,y-pisteitä koordinaatistoon, josta haarautuu puuksi oikeaan ja vasempaan ylä- sekä alanurkkaan
     - Examples: [Quadtree01.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree01.md), [Quadtree02.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree02.md)
 - Trie (algos03)
-    - [Trie.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/Trie.md)
+	- Standardtrie (standard trie): joukko S, järjestetty puu, jossa juurisolmua lukuunottamatta liittyy aakkoston (A) merkki, haarautuminen aakkoston mukaan, lehtisolmuja s kpl:tta,
+	jokaiseen lehtisolmuun liittyy yksi joukon S merkkijono joka kootaan polun merkeista
+	- Pakattu trie (packed trie): yksilapsisia solmuja yhdistetään. Merkkijonot puussa tai erillisessä taulukkossa, jossa alimerkkijonot: S[i][j..k], eli i:n merkkijonon merkit paikasta j paikkaan k
+    - Example: [Trie.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/Trie.md)
 - Bittivektori (bit vector) (algos03)
+	- Alkio tallennetaan taulukkoon ja viitataan suoraan taulukkoindeksillä 0 tai 1. Eli, a[i]=1, alkio i kuuluu bittivektorin joukkoon (0 ei kuuluisi)
+	- Esim. int[] A = { 1, 0, 1, 0, 1, 0 }; // { 0, 2, 4 }
+	- Operaatioita:
+		- Lisaa x set A:n
+		- Poista x set A:sta 
+		- Kuuluuko x set A:n
+		- Leikkaus, kuuluu A ja B:n (intersection: A nn B)
+		- Yhdiste, kuuluu A, B tai molempiin (union: A uu B)
+		- Erotus, kuuluu A:n muttei B:n (set difference: A \ B)
     - Example: [BitVector.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/BitVector.java)
 - Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
     - Example: -2, 1, -1, -1, -1
