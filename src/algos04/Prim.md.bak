@@ -71,15 +71,15 @@ E
 
 ### 4. Valitaan lyhin tie (u,v)
 - I(C,B) = 5, lyhin, jolla C on U:ssa, mutta V on jo U:ssa
-- I(E,C) = 4, lyhin, jolla u on U:ssa ja v ei ole U:ssa
-	- lisätään tie (E,C) joukkoon T
-	- lisätään solmu C joukkoon U
-- U = A, B, E, C
+- I(C,D) = 7, jolla u on U:ssa ja v ei ole U:ssa
+	- lisätään tie (C,D) joukkoon T
+	- lisätään solmu D joukkoon U
+- U = A, B, E, C, D
 
 ```
 A	  3		B
 
-6	C		D
+6	C	7	D
   4	  
 E
 ```

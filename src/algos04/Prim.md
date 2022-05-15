@@ -83,3 +83,5 @@ A	  3		B
   4	  
 E
 ```
+
+** Lyhimmän virittävän puun joukko: A, B, E, C, D, eli (A,B), (B,C), (C,E), (C,D)**

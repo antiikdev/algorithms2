@@ -13,7 +13,7 @@ Kruskal(N, E) // N solmujen joukko, E teiden joukko
   return T;
 }
 
-### All roads (S=E) & empty group (T=empty)
+### Kaikki tiet (S=E)
 ```
 A		3	B
   6	  8  5	8
@@ -90,3 +90,6 @@ A		3	B
   4		  
 E
 ```
+
+
+**Lyhyimpien teiden joukko: (A,B), (C,E), (C,B), (A,C), (C,D)**

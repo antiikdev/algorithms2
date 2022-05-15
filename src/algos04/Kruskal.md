@@ -90,3 +90,6 @@ A		3	B
   4		  
 E
 ```
+
+
+**Lyhyimmän virittävän puun teiden joukko: (A,B), (C,E), (C,B), (A,C), (C,D)**
