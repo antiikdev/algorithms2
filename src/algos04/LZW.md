@@ -1,6 +1,6 @@
 #LZW
 
-### Encode
+### Koodaus (encode)
 
 String: aabbbabbbaaa
 Kooditulos: 023042
@@ -12,94 +12,100 @@ Tilansäästö: 1 - (6 / 12) * 100 = 50 %, eli puolet
 0 1 
 a b
 
-**Longest char in directory now (a, code: 0) + next char.
-Next free number (2 >> aa):**
+**Longest char in directory now a (code 0) + next char code (a) = aa (2)**
 a|abbbabbbaaa
 0 1 2					Code: 0
 a b	aa
 
-**Longest char in directory now (aa, code: 2) + next char (b).
-Next free number (3 >> aab):**
+**Longest char in directory now a (code 0) + next char code (b) = ab (3)**
 aa|bbbabbbaaa
-0 1 2	3				Code: 02
-a b	aa	aab
+0 1 2	3				Code: 00
+a b	aa	ab
 
-**Longest char in directory now (b, code: 1) + next char (b).
-Next free number (4 >> bb):**
+**Longest char in directory now b (code 1) + next char code (b) = bb (4)**
 aab|bbabbbaaa
-0 1 2	3	4			Code: 021
-a b	aa	aab	bb
+0 1 2	3	4			Code: 001
+a b	aa	ab	bb
 
-**Longest char in directory now (a, code: 0) + next char (b).
-Next free number (5 >> ab):**
+**Longest char in directory now bb (code 4) + next char code (a) = bba (5)**
 aabbb|abbbaaa
-0 1 2	3	4	5		Code: 0230
-a b	aa	aab	bb	ab
+0 1 2	3	4	5		Code: 0014
+a b	aa	ab	bb	bba
 
-**Longest char in directory now (bb, code: 4) + next char (a).
-Next free number (5 >> ab):**
+**Longest char in directory now ab (code 3) + next char code (b) = abb (6)**
 aabbbab|bbaaa
-0 1 2	3	4	5	6	Code: 02304
-a b	aa	aab	bb	ab	bba
+0 1 2	3	4	5	6	Code: 00143
+a b	aa	ab	bb	bba	abb
 
-**Longest char in directory now (aa, code: 2) + next char (null).
-Next free number (null):**
+**Longest char in directory now bba (code 5) + next char code (a) = bbaa (7)**
 aabbbabbba|aa
-0 1 2	3	4	5	6	Code: 023042
-a b	aa	aab	bb	ab	bba
+0 1 2	3	4	5	6	7	Code: 001435
+a b	aa	ab	bb	bba	abb	bbaa
+
+**Longest char in directory now aa (code 2) + next char code (null)**
+aabbbabbba|aa
+0 1 2	3	4	5	6	7	Code: 0014352
+a b	aa	ab	bb	bba	abb	bbaa
 ```
 
-### Decode (purkaminen)
+**Tilansäästö:**
+pituus 12 ja koodin pituus 7, joten voisi säästyä noin 5/12=42% (arvio)
+
+
+### Purkaminen (decode)
 
 Code: 10143621
-chars: a = 0, b = 1 
+chars: a = 0, b = 1
 String tulos:: babbabbbabab
 Tilansäästö: 1- (8 / 12) * 100 = 33 %, eli kolmasosa
 
 ```
 **Start:**
-|10143621				String:
+|10143621					String: -
 0 1
 a b
 
 **1: b**
-1|0143621				String: b
+1|0143621					String: b
 0 1
 a b	
 
 **0: a, new 2 of aa**
-10|143621				String: ba
+10|143621					String: ba
 0 1	2
 a b	ba
 
-**1: b, new 3 of bb**
-101|43621				String: bab
+**1 is b, b + current first letter is a new 3 of ab**
+101|43621					String: bab
 0 1	2	3
 a b	ba	ab
 
-**Previous is 1 (b), therefore 4: bb, new 4 bb**
-1014|3621				String: babb
+**Previous is 1 (b) + current first letter b is a new 4 bb**
+1014|3621					String: babbb
 0 1	2	3	4
 a b	ba	ab	bb
 
-**Previous is 4 (bb), therefore 3: ab, new 5 of abb**
-10143|621				String: babbab
-0 1	2	3	4	5	6
-a b	ba	ab	bb	abb	
+**Add 3 of ab. Previous is 4 bb + current first letter = 5 of bba**
+10143|621					String: babbbab
+0 1	2	3	4	5
+a b	ba	ab	bb	bba	
 
-**Previous is 3 (ab) and 5 abb, therefore 6: bba **
-101436|21				String: babbabbba
+**Previous is 3 (ab) and current first letter (a), therefore 6: aba **
+101436|21					String: babbbababa
 0 1	2	3	4	5	6
-a b	ba	ab	bb	abb	bba
+a b	ba	ab	bb	abb	aba
 
 * 2: ba **
-1014362|1				String: babbabbbaba
-0 1	2	3	4	5	6
-a b	ba	ab	bb	abb	bba
+1014362|1					String: babbbabababa
+0 1	2	3	4	5	6	7
+a b	ba	ab	bb	abb	bba abab
 
 * 1: b **
-10143621|				String: babbabbbabab
-0 1	2	3	4	5	6
-a b	ba	ab	bb	abb	bba
+10143621|					String: babbbabababab
+0 1	2	3	4	5	6	7	 8
+a b	ba	ab	bb	abb	bba abab bab
 
 ```
+
+**Tilansäästö:**
+pituus 13 ja koodin pituus 8, joten voisi säästyä noin 5/13=39% (arvio)

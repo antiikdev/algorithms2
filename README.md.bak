@@ -75,7 +75,7 @@
         - Example: [Prim.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Prim.md)
 - Merkkitiedon tiivistäminen ja koodaus
 	- Huffman koodit (Huffman coding) (algos04)
-		- 1) Suuruusjarjestykseen, 2) valitaan kaksi painoarvoltaan pieninta puuta yhdeksi, joiden painoarvon summa niiden juurisolmuun, jatketaan...
+		- 1) Suuruusjarjestykseen, 2) valitaan kaksi painoarvoltaan pieninta puuta yhdeksi, joiden painoarvon summa niiden juurisolmuun, jatketaan yhdistelya.
 		- Example: [Huffman.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Huffman.md)
 	- LZW-menetelma (algos04)
 		- merkkijonon koodaus ja purkaminen
