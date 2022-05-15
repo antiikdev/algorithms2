@@ -78,15 +78,16 @@
 		- 1) Suuruusjarjestykseen, 2) valitaan kaksi painoarvoltaan pieninta puuta yhdeksi ja painoarvojen summa niiden juurisolmuun, jatketaan yhdistelya solmuissa.
 		- Example: [Huffman.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Huffman.md)
 	- LZW-menetelma (algos04)
-		- merkkijonon koodaus ja purkaminen
+		- Merkkijonon koodaus ja purkaminen
 		- Example:  [LZW.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/LZW.md)
-- 3-väritysongelma peruutusmenetelmällä (Three-Coloring Problem with backtracking method) (algos05)
+- 3-väritysongelma peruutusmenetelmällä (Three-Coloring Problem with "backtracking" method) (algos05)
     - Eri väri jokaisessa toisiinsa liittyvässä solmussa
     - Example: [ThreeColor.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/ThreeColor.md)
 - Pelipuu (Game tree) (algos05)
     - "x is MAX player, large values are better y is MIN player, small values are better"
     - Example: [GameTree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/GameTree.md)
-- Rajoitehakumenetelmällä kapsäkkiongelma (Knapsack problem) (algos05)
-    - Example: [Kapsakkiongelma.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/Kapsakkiongelma.md)
+-  Kapsäkkiongelma (Knapsack problem) (algos04, algos05)
+	- Taulukoimalla: [Knapsack.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Knapsack.java)
+    - Rajoitehakumenetelmällä: [Kapsakkiongelma.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/Kapsakkiongelma.md)
 
 
