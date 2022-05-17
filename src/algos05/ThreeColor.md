@@ -30,8 +30,9 @@ Coloring order:  A, B, C, D, E, F
 - e = ei (no) or empty
 - 1, 2, 3 are different colors
 
-**1st round**
+**1st round - backtracking**
 ```
+
 	    0
 	   /|\
 A:	  1
@@ -39,17 +40,20 @@ A:	  1
 B:	e 2
 	 /|\
 C:	1 
-       /|\
-D:      e 2
-       /|\
-E:    e e 3
+   /|\
+D:e 2
+   /|\
+E:e e 3
 	 /|\
-F:      e e e
+F:  e e e
 
 ```
+
+-->> Color not found, backtracking (peruutetaan)
 
 **2nd round - solved** 
 ```
+
  	    0
 	   /|\
 A:	  1
@@ -57,10 +61,13 @@ A:	  1
 B:	e 2
 	 /|\
 C:	1 
-       /|\
-D:    e e 3
+   /|\
+D:e e 3
 	 /|\
 E:	e 2 
 	 /|\
 F: 	e e 3
+
 ```
+
+-->> Solution found: A:1, B:2, C:1, D:3, E:2, F:3

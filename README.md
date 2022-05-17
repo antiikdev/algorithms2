@@ -1,7 +1,8 @@
 # Algoritmit 2 (Eng. algorithms)
 
-## Aiheet (per paketti) - Topics (per packet):
+Aiheet (per paketti) - Topics (per packet)
 
+## Tietorakenteet (Data structures)
 - Prioriteettijono (priority queue) (algos01)
     - Numeerinen arvo, joka kuvastaa alkion tärkeyttä. Löydettävä aina tärkein arvo.
     - Operaatioita: lisaaAlkio, poistaPienin, isEmpty
@@ -55,6 +56,9 @@
 		- Alkutilanne: 1 2 3 4 5, puu alussa -1 -1 -1 -1 -1, jossa jokainen juurisolmuna
 		- Liitetään alkio 5 osaksi 1:tä, jolloin -2, 1, -1, -1, -1, jossa indeksissä 1 on -2 nyt juurisolmu ja puun alkioiden lukumäärä (-2).
     - Example: [UnionFind.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/UnionFind.java) 
+
+## Algoritmien suunnittelumenetelmat (Algorithms design and analysis)
+
 - **Rekursio (recursion) (algos03, algos04, algos05)**
 	- Examples:
 		- Remainder sum [Remainder.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/Remainder.java)
@@ -81,13 +85,23 @@
 		- Merkkijonon koodaus ja purkaminen
 		- Example:  [LZW.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/LZW.md)
 - 3-väritysongelma peruutusmenetelmällä (Three-Coloring Problem with "backtracking" method) (algos05)
-    - Eri väri jokaisessa toisiinsa liittyvässä solmussa
+    - Eri väri jokaisessa toisiinsa liittyvässä solmussa. Ratkaistaan puulla. Jos vari jo kaytossa, peruutetaan taaksepain ja vaihdetaan vareja.
     - Example: [ThreeColor.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/ThreeColor.md)
 - Pelipuu (Game tree) (algos05)
-    - "x is MAX player, large values are better y is MIN player, small values are better"
+    - X and y take turns and in each turn: "x is MAX player, where large values are chosen; y is MIN player, where small values are chosen"
+	- alpha-beta pruning (a-b-karsinta): Save computation in the nodes (to alpha and beta) bottom-up by min and max and only go through possible outcome values
     - Example: [GameTree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/GameTree.md)
 -  Kapsäkkiongelma (Knapsack problem) (algos04, algos05)
 	- Taulukoimalla: [Knapsack.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Knapsack.java)
     - Rajoitehakumenetelmällä: [Kapsakkiongelma.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/Kapsakkiongelma.md)
+- Kauppamatkustajan ongelma (Travelling salesman problem)
+	- Kauppamatkusjan ongelma: lyhin reitti joka kulkee kaikkien solmujen kautta täsmälleen kerran
+	- Lin & Kernighan -vaihtoalgoritmi (heuristic):
+		- 1. Poistetaan reitiltä kaksi tietä, jotka eivät ole peräkkäin, ja lisätään kaksi uutta tietä siten, että muodostuu sallittu reitti.
+		- 2. Kaydaan lapi kaikki kahden tien vaihdot.
+		- 3. Uudeksi ratkaisuksi valitaan reitit, jotka lyhentävät reittiä eniten.
 
 
+## Laskennallinen vaativuus
+
+- NP-taydellisyys

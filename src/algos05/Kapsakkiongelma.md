@@ -1,8 +1,7 @@
 # Kapsakkiongelma rajoitehakumenetelmällä
 
 Kokonaispainoraja (W): 8
-Tavarat järjestetty vähenevään järjestykseen hyötyarvo-painosuhteen
-mukaan:
+Tavarat järjestetty vähenevään järjestykseen hyötyarvo-painosuhteen mukaan:
 
 ```
                 1  2  3   4
