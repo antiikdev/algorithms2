@@ -95,6 +95,7 @@ Aiheet (per paketti) - Topics (per packet)
 	- Taulukoimalla: [Knapsack.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos04/Knapsack.java)
     - Rajoitehakumenetelmällä: [Kapsakkiongelma.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/Kapsakkiongelma.md)
 - Kauppamatkustajan ongelma (Travelling salesman problem)
+	- Kauppamatkusjan ongelma: lyhin reitti joka kulkee kaikkien solmujen kautta täsmälleen kerran
 	- Lin & Kernighan -vaihtoalgoritmi (heuristic):
 		- 1. Poistetaan reitiltä kaksi tietä, jotka eivät ole peräkkäin, ja lisätään kaksi uutta tietä siten, että muodostuu sallittu reitti.
 		- 2. Kaydaan lapi kaikki kahden tien vaihdot.

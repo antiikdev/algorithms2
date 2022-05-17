@@ -100,6 +100,7 @@ Aiheet (per paketti) - Topics (per packet)
 		- 1. Poistetaan reitiltä kaksi tietä, jotka eivät ole peräkkäin, ja lisätään kaksi uutta tietä siten, että muodostuu sallittu reitti.
 		- 2. Kaydaan lapi kaikki kahden tien vaihdot.
 		- 3. Uudeksi ratkaisuksi valitaan reitit, jotka lyhentävät reittiä eniten.
+		- Example: [Kauppamatkustaja_LinKernighan.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/Kauppamatkustaja_LinKernighan.md)
 
 
 ## Laskennallinen vaativuus
