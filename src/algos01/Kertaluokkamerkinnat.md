@@ -12,21 +12,9 @@
     - c, n > 0 : 0 <= c1g(n) <= f(n) <= c2g(n)  n >= n0
 
 
-## Raja-arvotesti
-
-```
-         tA(n)
-lim n->M ----- = C tai 0 tai ääretön (M)
-         tB(n)
-```
-
-- Raja-arvo nollasta eroava vakio C (f(n) != 0): f(n) on asymptoottisesti yhtä suuri, eli funktiot ovat samaa kertaluokkaa
-- Raja-arvo nolla: tB(n) funktio kasvaa nopeammin kuin tB(n), eli tA(n) on asymptoottisesti pienempi kuin tB(n)
-- Raja-arvo ääretön: tA(n) osoittaja on asymptoottisesti suurempi kuin tB(n), eli tA(n) kasvaa nopeammin
-
-
-
-## Esimerkit epäyhtälöistä
+## Kertaluokkamerkinnät ja esimerkit epäyhtälöistä
+Osoitetaan väitteet oikeaksi määritelmien avulla ja etsitään sopivat vakiot n0, c, c1, c2,
+joilla epäyhtälöt toteutuvat.
 
 ### 2n^2 + 3n = O(n^2)
 
@@ -163,3 +151,16 @@ c2n^2 - n^2 - 2n - 5 => 0
 ```
 
 Kokeillaan c2 = 2 --> >= 0, kun n >= 4
+
+
+## Raja-arvotesti
+
+```
+         tA(n)
+lim n->M ----- = C tai 0 tai ääretön (M)
+         tB(n)
+```
+
+- Raja-arvo nollasta eroava vakio C (f(n) != 0): f(n) on asymptoottisesti yhtä suuri, eli funktiot ovat samaa kertaluokkaa
+- Raja-arvo nolla: tB(n) funktio kasvaa nopeammin kuin tB(n), eli tA(n) on asymptoottisesti pienempi kuin tB(n)
+- Raja-arvo ääretön: tA(n) osoittaja on asymptoottisesti suurempi kuin tB(n), eli tA(n) kasvaa nopeammin
