@@ -3,7 +3,7 @@
 Aiheet (per paketti) - Topics (per packet)
 
 ## Tietorakenteet (Data structures)
-- Algoritmien tehokkuuden analysointi ([Algoritmit1.git](https://github.com/antiikdev/algorithms1))
+- Algoritmien tehokkuuden analysointi (algos01, [Algoritmit1.git](https://github.com/antiikdev/algorithms1))
 	- Kertaluokkamerkinnat (asymptotic analysis), epäyhtälöt ja raja-arvotesti
 	- Example: [Kertaluokkamerkinnat.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Kertaluokkamerkinnat.md)
 - Prioriteettijono (priority queue) (algos01)
