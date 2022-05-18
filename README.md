@@ -7,7 +7,7 @@ Aiheet (per paketti) - Topics (per packet)
 	- Kertaluokkamerkinnat (asymptotic analysis), epäyhtälöt ja raja-arvotesti
 	- Example: [Kertaluokkamerkinnat.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Kertaluokkamerkinnat.md)
 - Prioriteettijono (priority queue) (algos01)
-    - Numeerinen arvo, joka kuvastaa alkion tärkeyttä. Löydettävä aina tärkein arvo.
+    - Numeerinen arvo, joka kuvastaa alkion tärkeyttä, eli esim. pienempi tai suurempi arvo tarkoittaa tärkeämpää (minimi- tai maksimiprioriteettijono). Löydettävä aina tärkein arvo jonosta, esim. järjestämätön lineaarinen lista Θ(1), tai läpikäynti pahimmillaan Θ(n).
     - Operaatioita: lisaaAlkio, poistaPienin, isEmpty
     - Example: [PriorityQueue.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/PriorityQueue.java)
 - Keko kokonaislukutaulukolla (heap and heapsort) (algos01)
