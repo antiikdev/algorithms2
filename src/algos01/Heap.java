@@ -80,11 +80,11 @@ public class Heap {
 	 * @param i 
 	 */
 	public static void korjaaKeko(int[] a, int i) {
-		if (2*i > a[0]) return; // i:ll‰ ei lapsia, ei tekoja
+		if (2*i > a[0]) return; // i:ll√§ ei lapsia, ei tekoja
 		
 		int j = 2*i;
 		int alkio = a[i];
-		// Siirret‰‰n alkiota kohti lehtisolmuja
+		// Siirret√§√§n alkiota kohti lehtisolmuja
 		while (j <= a[0]) {
 			if ((j < a[0]) && (a[j] > a[j+1])) j = j+1;
 			if (alkio <= a[j]) break; // lopetetaan silmukka
@@ -192,7 +192,7 @@ public class Heap {
 		// --------- Muodostetaan uusi keko -------
 		// ----------------------------------------
 		// lisaaKekoon-algoritmilla
-		/*
+		/* Vertaillaan vanhempaansa taulukossa.
 		 a  1  2  3  4  5  6  7  8  9  10
 		 1  12 
 		 2  12 20
@@ -222,6 +222,9 @@ public class Heap {
 	
 		
 		// teeKeko-algoritmilla
+		/*
+		Lisataan ja vertaillaan taulukossa.
+		*/
 		System.out.println("teeKeko-algoritmilla:");
 		// taulukko2[0] alkioiden lukumaara:
 		int[] taulukko2 = { 10, 12, 20, 18, 4, 33, 26, 9, 17, 25, 13 };
