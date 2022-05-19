@@ -28,14 +28,13 @@ Aiheet (per paketti) - Topics (per packet)
 				- Lineaarinen etsintä (linear search): return (key + i) % this.m;
 				- Neliöllinen etsintä (square seach): return (key + i * i) % this.m;
 				- Kaksoishajautus (double hash): return (key + (7 - i * (key % 7))) % this.m;
-    - Example: [Hash.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Hash.java)
+    - Examples: [Hash.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Hash.java), [HashSearch.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/HashSearch.java)
 - B-puu (B-tree) (algos02)
 	- 2-3-4-puu, jossa lkm:t ovat m(korkeus)-solmut-osoittimet
 	- Lisays: tarkkaillaan solmujen maksimimaaraa, jottei tule liian tayteen.
 	- Poisto: Tarkkaillaan solmujen minimimaaraa, jottei tule liian vajaaksi
 			- Vaihtoehdot: alkoiden siirto, solmujen yhdistaminen tai etsitaan edeltaja tai seuraaja
-    - Examples: [Btree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Btree.md),
-	[HashSearch.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/HashSearch.java)
+    - Examples: [Btree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Btree.md)
 - Nelipuu (Quadtree) (algos02)
 	- x,y-pisteitä koordinaatistoon, josta haarautuu puuksi oikeaan ja vasempaan ylä- sekä alanurkkaan
     - Examples: [Quadtree01.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree01.md), [Quadtree02.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos02/Quadtree02.md)
