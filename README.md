@@ -11,7 +11,8 @@ Aiheet (per paketti) - Topics (per packet)
     - Operaatioita: lisaaAlkio, poistaPienin, isEmpty
     - Example: [PriorityQueue.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/PriorityQueue.java)
 - Keko kokonaislukutaulukolla (heap and heapsort) (algos01)
-    - Tallennettavista alkioista binääripuu, jossa jokaisessa solmussa yhden alkio tiedot sekä osittain järjestetty tai täydellinen
+    - Tallennettavista alkioista binääripuu, jossa jokaisessa solmussa yhden alkio tiedot. Lapsisolmujen arvot eivät saa olla pienempiä kuin niiden vanhempien arvot. Puu on osittain järjestetty tai täydellinen. 
+    - Esim. (Heap.java) Keko, joka totetutettu kokonaislukutaulukolla, muodostaa keon niin kauan lapsi t[i] on suurempi (>) kuin vanhempansa t[i/2]. Toiseksi pienin voidaan löytää vakioajassa t[2] tai t[3], jossa pienimmat. Vastaavasti suurin löytyy taulukon lopusta, jossa 1. lehtisolmu on paikassa t[n/2]+1, ja siitä eteenpäin O(n).
     - Heap example: [Heap.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heap.java)
     - Heapsort example: [Heapsort.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Heapsort.java)
 - Hajautus (Hash) (algos02)
