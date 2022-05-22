@@ -2,6 +2,7 @@
 
 ### 1. Ositetaan suoritusajan (s) osaongelmien lukumäärä.
  
+```
  int laske(n)					// n > 1
   {
     if (n <= 1)                // Lopetus
@@ -12,7 +13,7 @@
       x = x + j;
     return x;
   }
-
+```
 
 ### 2. Määritellään osaongelmien perusteella rekursioyhtälö
 
