@@ -1,4 +1,4 @@
-#Rekursioyhtalo ja master-lause (master theorem)
+# Rekursioyhtalo ja master-lause (master theorem)
 
 ### 1. Ositetaan suoritusajan (s) osaongelmien lukumäärä.
  
@@ -31,11 +31,11 @@ T(n)=|
 Oleelliset arvot: a, b, α ja c
 
 Ratkaisun kertaluokka on
-ϴ(n^log_ba), 	jos a > b^alfa tai c = 0
+ϴ(n^log_ba), 	jos a > b^α tai c = 0
 ϴ(n^α), 		jos a < b^α ja c != 0
-ϴ(n^αlog_bn), 	jos a = b^α ja c != 0
+ϴ(n^α log_bn), 	jos a = b^α ja c != 0
 
-**Master-lauseessa tehtävässä**
+**Master-lauseessa tehtävässä:**
 
 a=k (k=2), b=4, α=1 ja c !=0
 
@@ -44,3 +44,16 @@ a=k (k=2), b=4, α=1 ja c !=0
 
 a < b^α
 2 < 4^1 ==> T(n) = ϴ(n^α) = ϴ(n)
+
+**k=4**
+a=k (k=4), b=4, α=1
+
+a = b^α
+4 = 4^1 ==> T(n) = ϴ(n^αlog_bn) = ϴ(nlogn)
+
+**k=6**
+a=k (k=6), b=4, α=1 
+
+a > b^α
+6 > 4^1 ==> T(n) = ϴ(n^log_46) = ϴ(log_46 = 1,29)
+

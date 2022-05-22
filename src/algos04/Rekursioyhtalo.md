@@ -1,4 +1,4 @@
-#Rekursioyhtalo ja master-lause (master theorem)
+# Rekursioyhtalo ja master-lause (master theorem)
 
 ### 1. Ositetaan suoritusajan (s) osaongelmien lukumäärä.
  
@@ -37,7 +37,7 @@ Ratkaisun kertaluokka on
 
 **Master-lauseessa tehtävässä:**
 
-a=k (k=2), b=4, α=1 ja c !=0
+a=k, b=4, α=1 ja c !=0
 
 **k=2**
 a=k (k=2), b=4, α=1 ja c !=0
