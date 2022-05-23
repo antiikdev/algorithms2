@@ -61,7 +61,7 @@ Aiheet (per paketti) - Topics (per packet)
 	- Alkiovieraat osajoukot (disjoint sets) Union-find operations (algos03)
 		- Puurakenteen toteutus taulukolla:
 			- Alkutilanne: 1 2 3 4 5, puu alussa -1 -1 -1 -1 -1, jossa jokainen juurisolmuna
-			- Liitetään alkio 5 osaksi 1:tä, jolloin -2, 1, -1, -1, -1, jossa indeksissä 1 on -2 nyt juurisolmu ja puun alkioiden lukumäärä (-2).
+			- Liitetään alkio 5 osaksi 1:tä, jolloin -2, -1, -1, -1, 1, jossa indeksissä 1 on -2 nyt juurisolmu ja puun alkioiden lukumäärä (-2).
 		- Example: [UnionFind.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/UnionFind.java) 
 
 ## Algoritmien suunnittelumenetelmat (Algorithms design and analysis)
@@ -137,11 +137,11 @@ Aiheet (per paketti) - Topics (per packet)
 - Päätösongelmat
 - Epädeterministinen algoritmi
 - Vaativuusluokat
-	- P = päätösongelmat, jotka voidaan ratkaista polynomisella algoritmilla
+	- P = päätösongelmat (kyllä/ei), jotka voidaan ratkaista polynomisella algoritmilla
 	- NP = päätösongelmat, jotka voidaan ratkaista epädeterministisellä (arvauksella) polynomisella algoritmilla.
-	Deterministinen polynominen "tarkastus"
+	Deterministinen (yksikäsitteiset askeleet) polynominen "tarkastus"
 - NP-täydellisyys
-	- Päätösongelman muuntainen toiseksi päätösongelmaksi
-	- Ongelma T on NP-täydellinen, jos jokainen ongelma S voidaan muuntaa polynomisessa ajassa ongelmaksi T
-	- Ei tunneta polynomisessa ajassa olevaa ratkaisua, mutta o
-	
+	- Päätösongelman muuntaminen toiseksi päätösongelmaksi
+	- Ongelma T on NP-täydellinen (NP vaikeimmat ongelmat), jos jokainen ongelma S voidaan muuntaa polynomisessa ajassa ongelmaksi T
+	- Ei tunneta polynomisessa ajassa olevaa ratkaisua, mutta ratkaisu voidaan tarkastaa polynomisessa ajassa.
+	- Ratkaiseminen: jos pieni ongelma, käydään kaikki ratkaisuvaihtoehdot läpi. Jos iso ongelma, käytetään polynomisessa ajassa toimivia heuristisia algoritmeja (tarpeeksi hyvä¨).
