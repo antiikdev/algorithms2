@@ -1,4 +1,4 @@
-# Kauppamatkusjan ongelma (Traveling salesman problem) - Lin & Kernighan heuristic
+# Kauppamatkustajan ongelma (Traveling salesman problem) - Lin & Kernighan heuristic
 
 Kauppamatkusjan ongelma: lyhin reitti joka kulkee kaikkien solmujen
 kautta täsmälleen kerran
