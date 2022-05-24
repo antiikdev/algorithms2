@@ -18,7 +18,6 @@ a		u			o			a			o
 ### Pakattu trie (packed trie)
  
 ```
-
 				0
 
 	l				ro			t
@@ -27,8 +26,6 @@ aki   uu	   	 mu   po	avu		o
 
 							     mu   r
 								     a u
-								 
-	
 ```
 
 
@@ -39,15 +36,15 @@ aki   uu	   	 mu   po	avu		o
 - Esim. 0,1,2 = S[0], merkkijonot 1 paikkaan 2 
 
 ```
-
 						0
 	
 	0,0,0			2,0,1			4,0,0
 
 0,1,3	1,1,2	2,2,3	3,2,3	4,1,3		  5,1,1
 										5,2,3		6,2,2
-												6,3,3  7,3,3
-										
+												6,3,3  7,3,3							
+```
+
 ```
     | 0 1 2 3 
 -------------
@@ -59,4 +56,5 @@ S[4]| t a v u
 S[5]| t o m u
 S[6]| t o r a
 S[7]| t o r u
+
 ```
