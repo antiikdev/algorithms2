@@ -1,5 +1,6 @@
 # Kruskal
 
+```
 Kruskal(N, E) // N solmujen joukko, E teiden joukko
 {
   S = E; // kaikki tiet
@@ -12,6 +13,7 @@ Kruskal(N, E) // N solmujen joukko, E teiden joukko
   }
   return T;
 }
+```
 
 ### Kaikki tiet (S=E)
 ```
