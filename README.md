@@ -62,7 +62,8 @@ Aiheet (per paketti) - Topics (per packet)
 		- Puurakenteen toteutus taulukolla:
 			- Alkutilanne: 1 2 3 4 5, puu alussa -1 -1 -1 -1 -1, jossa jokainen juurisolmuna
 			- Liitetään alkio 5 osaksi 1:tä, jolloin -2, -1, -1, -1, 1, jossa indeksissä 1 on -2 nyt juurisolmu ja puun alkioiden lukumäärä (-2).
-		- Example: [UnionFind.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/UnionFind.java) 
+		- Example: [DisjointSetTree.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/DisjointSetTree.md)
+		- Code example: [UnionFind.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos03/UnionFind.java) 
 
 ## Algoritmien suunnittelumenetelmat (Algorithms design and analysis)
 
