@@ -49,8 +49,7 @@ aki   uu	   	 mu   po	avu		o
 												6,3,3  7,3,3
 										
 ```
-
-	| 0 1 2 3 
+    | 0 1 2 3 
 -------------
 S[0]| l a k i
 S[1]| l u u
@@ -60,3 +59,4 @@ S[4]| t a v u
 S[5]| t o m u
 S[6]| t o r a
 S[7]| t o r u
+```
