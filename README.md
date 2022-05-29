@@ -1,6 +1,7 @@
 # Algoritmit 2 (Eng. algorithms)
 
 Aiheet (per paketti) - Topics (per packet)
+Lähde (source): Jyu, TIEA211
 
 ## Tietorakenteet (Data structures)
 - **Algoritmien tehokkuuden analysointi** (algos01, [Algoritmit1.git](https://github.com/antiikdev/algorithms1))
@@ -8,7 +9,7 @@ Aiheet (per paketti) - Topics (per packet)
 	- Example: [Kertaluokkamerkinnat.md](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/Kertaluokkamerkinnat.md)
 - Prioriteettijono (priority queue) (algos01)
     - Numeerinen arvo, joka kuvastaa alkion tärkeyttä, eli esim. pienempi tai suurempi arvo tarkoittaa tärkeämpää (minimi- tai maksimiprioriteettijono). Löydettävä aina tärkein arvo jonosta, esim. järjestämätön lineaarinen lista Θ(1), tai läpikäynti pahimmillaan Θ(n).
-    - **Operaatioita: lisaaAlkio, poistaPienin, isEmpty**
+    - Operaatioita: lisaaAlkio, poistaPienin, isEmpty
     - Example: [PriorityQueue.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos01/PriorityQueue.java)
 - **Keko kokonaislukutaulukolla (heap and heapsort)** (algos01)
     - Tallennettavista alkioista binääripuu, jossa jokaisessa solmussa yhden alkio tiedot. Lapsisolmujen arvot eivät saa olla pienempiä kuin niiden vanhempien arvot. Puu on osittain järjestetty tai täydellinen. 
@@ -25,8 +26,8 @@ Aiheet (per paketti) - Topics (per packet)
 	- Hajautusfunktio:
 		- Avaimien hajauttaminen: muodostuksessa esim. h(x) = x-a tai jakolaskumenetelmä jos arvoalue suuri h(x)=x mod x
 		- Yhteentörmäys, jos avaimilla sama kotiosoite. Kaksi tapaa käsitellä:
-			- Ketjutus: lineaarinen lista
-			- Avoin osoitteenmuodostus: tallennus hajautustaulukkoon, aputilaa ei tarvita, jossa alkion paikan määrittäminen:
+			- Ketjutus: lineaarinen _lista_, osoittimet listojen 1. alkioihin, yleensä järjestämätön. Yksinkertaisia listaoperaatioita.
+			- Avoin osoitteenmuodostus: tallennus suoraan hajautustaulukkoon, aputilaa ei tarvita, jossa alkion paikan määrittäminen:
 				- Lineaarinen etsintä (linear search): return (key + i) % this.m;
 				- Neliöllinen etsintä (square seach): return (key + i * i) % this.m;
 				- Kaksoishajautus (double hash): return (key + (7 - i * (key % 7))) % this.m;
@@ -78,7 +79,7 @@ Aiheet (per paketti) - Topics (per packet)
 		- Recursive sum and sum using division [RecursiveSum.java](https://github.com/antiikdev/algorithms2/blob/master/src/algos05/RecursiveSum.java)
 - **Rekursioyhtalo (algos04)**
 	- Edellisillä luvuilla lasketaan seuraava, josta rekursio yhtälö, joka voidaan laskea purkamalla iteraatiot auki
-	- **Master-lause (master theorem)**: sovelletaan kun ositus on tehty jakamalla, eli kun T(n) = aT(n/b) + cn^α	
+	- Master-lause (master theorem): sovelletaan kun ositus on tehty jakamalla, eli kun T(n) = aT(n/b) + cn^α	
 		- a = kuinka monta rekursiivista kutsua
 		- b = minkä kokoisia kutsuja
 		- cn^α = mitä muuta ulkopuolella (vakio-aikaisia α=0, lineaarinen yksi silmukka α=1 tai sisäkkäiset silmukat α=n^2)
@@ -134,9 +135,9 @@ Aiheet (per paketti) - Topics (per packet)
 
 ## Laskennallinen vaativuus
 
-- Laskennallinen vaativuus
-- Päätösongelmat
-- Epädeterministinen algoritmi
+- Laskennallinen vaativuus: ongelmien luokittelu vaativuusluokkiin (computational complexity theory).
+- Päätösongelmat (decision problem): kuuluuko syöttötieto x joukkoon S; boolean vastaus (0/1; false/true)
+- Epädeterministinen algoritmi: 1) epädeterministinen "arvausvaihe" ratkaisuehdotuksella ja 2) deterministinen "tarkastusvaihe" onko ehdokas esiintymän ratkaisu
 - Vaativuusluokat
 	- P = päätösongelmat (kyllä/ei), jotka voidaan ratkaista polynomisella algoritmilla
 	- NP = päätösongelmat, jotka voidaan ratkaista epädeterministisellä (arvauksella) polynomisella algoritmilla.
